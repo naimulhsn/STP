@@ -179,8 +179,9 @@ class AdController extends Controller
      */
     public function destroy($id)
     {
-        if($ad->user_id!= auth()->id() )abort(403);
         $ad=Ad::findOrFail($id);
+        if($ad->user_id!= auth()->id() )abort(403);
+        
         $cat=$ad->category;
 
         $res= DB::select('select product_count as pp from categories where category=?',[$cat]);;

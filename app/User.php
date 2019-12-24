@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     
     public function ads(){
-        return $this->hasMany('App\Ad');
+        return $this->hasMany('app\Ad');
     }
     
 

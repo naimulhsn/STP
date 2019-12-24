@@ -12,7 +12,7 @@
                 </button>
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <b>Plants at Hand</b>
                 </a>
                 
 
@@ -24,11 +24,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('ads.create')}} ">
-                                <button type="button" class=" btn btn-danger ">Place your Ad</button>
-                            </a>
-                        </li>
+                        
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -44,11 +40,7 @@
                             </li>
                             @endif
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link text-" href={{ route('ads.index') }}>
-                                    <button type="button" class="btn btn-outline-secondary">{{ __('Manage your Ads') }}</button>
-                                </a>
-                            </li>
+                           
 
                             <li class="nav-item dropdown">
                                 

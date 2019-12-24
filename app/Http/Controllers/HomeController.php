@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Ad;
-use App\Category;
+use app\Ad;
+use app\Category;
 class HomeController extends Controller
 {
     /**

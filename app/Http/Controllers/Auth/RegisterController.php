@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace app\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use app\User;
+use app\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-use App\Rules\ValidGender;
-use App\Rules\ValidDept;
-use App\Rules\ValidSession;
-use App\Rules\ValidPhone;
+use app\Rules\ValidGender;
+use app\Rules\ValidDept;
+use app\Rules\ValidSession;
+use app\Rules\ValidPhone;
 class RegisterController extends Controller
 {
     /*
@@ -67,7 +67,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \app\User
      */
     protected function create(array $data)
     {

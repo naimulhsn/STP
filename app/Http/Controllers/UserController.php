@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Ad;
+use app\User;
+use app\Ad;
 class UserController extends Controller
 {
     public function __construct()

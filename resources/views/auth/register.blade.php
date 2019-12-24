@@ -26,48 +26,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="gender" required>
-                                    <option value="">Select :</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="dept" class="col-md-4 col-form-label text-md-right">{{ __('Department') }}</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="dept" required>
-                                    <option value="">Select :</option>
-                                    <option value="CSE">CSE</option>
-                                    <option value="EEE">EEE</option>
-                                    <option value="PHY">PHY</option>
-                                    <option value="MATH">MATH</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="session" class="col-md-4 col-form-label text-md-right">{{ __('Session') }}</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="session" required>
-                                    <option value="">Select :</option>
-                                    <option value="2018-19">2018-19</option>
-                                    <option value="2017-18">2017-18</option>
-                                    <option value="2016-17">2016-17</option>
-                                    <option value="2015-16">2015-16</option>
-                                    <option value="2014-15">2014-15</option>
-                                    <option value="2013-14">2013-14</option>
-                                    <option value="2012-13">2012-13</option>
-                                </select>
-                            </div>
-                        </div>
-
+                     
                         <div class="form-group row">
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
@@ -119,7 +78,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>

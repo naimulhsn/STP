@@ -16,22 +16,12 @@
                                 </div>
                                 <hr>
                                 @foreach ($categories as $cat)
-                                    @if($cat->category=='Others')
-                                    @php
-                                        $othersCount=$cat->product_count
-                                    @endphp
-                                    @continue
-                                    @endif
                                     <div class="li">
                                             <a style="{{($curr==$cat->category) ? 'font-weight:bold; font-size:1.2em' : '' }}"  href={{route('home.category',$cat->category)}}>{{$cat->category}}</a></span>
-                                            <span class="float-right">({{$cat->product_count}})</span>
+                                            <span class="float-right">({{$cat->plants}})</span>
                                     </div>
                                     <hr>
                                 @endforeach
-                                <div class="li">
-                                        <a style="{{($curr=="Others") ? 'font-weight:bold; font-size:1.2em' : '' }}" href={{route('home.category',"Others")}} >Others</a></span>
-                                        <span class="float-right">({{$othersCount}})</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,7 +30,7 @@
 
         {{-- Show ads here --}}
         
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header ">
                     <button type="button" class="btn btn-outline-secondary" disabled>{{$curr}}</button>
@@ -67,7 +57,7 @@
                         <div class="row">
                             @foreach($ads as $ad) 
                             {{-- foreach adddddddddddddddddddddddddd --}}
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <a href="{{ route('ads.show', $ad->id) }}">
 
                                         <div class="custom_card card mb-4">
@@ -79,17 +69,7 @@
                                                     <p class="d-inline ">Category : </p>
                                                     <strong class="d-inline " > {{$ad->category}}</strong>
                                                 </span>
-                                                <br>
-                                                <span >
-                                                    <p class="d-inline "> Condition : </p> 
-                                                    <strong class="d-inline " @if($ad->condition=='New')style="color:tomato" @endif > {{$ad->condition}}</strong>
-                                                </span>
-                                                <br>
-                                                <span>
-                                                    <p class="d-inline" style="color:seagreen">Price : </p> 
-                                                    <strong class="d-inline" style="color:seagreen"> {{ $ad->price }} TK</strong>
-                                                    
-                                                </span>
+                                              
                                             </div>
                                         </div>
                                     </a>
@@ -104,12 +84,6 @@
                                 
                     </div>
                 </div>
-            </div>
-        </div>
-        {{-- Right side --}}
-        <div class="col-md-2">
-            <div class="card ">
-                <div class="card-header">    Order by: Recent </div>
             </div>
         </div>
     </div>

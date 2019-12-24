@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 use Auth;
-use App\User;
-use App\Ad;
-use App\Category;
+use app\User;
+use app\Ad;
+use app\Category;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -113,7 +113,7 @@ class AdController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ad  $ad
+     * @param  \app\Ad  $ad
      * @return \Illuminate\Http\Response
      */
     public function show(Ad $ad)
@@ -128,7 +128,7 @@ class AdController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ad  $ad
+     * @param  \app\Ad  $ad
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -144,7 +144,7 @@ class AdController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ad  $ad
+     * @param  \app\Ad  $ad
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -174,7 +174,7 @@ class AdController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ad  $ad
+     * @param  \app\Ad  $ad
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

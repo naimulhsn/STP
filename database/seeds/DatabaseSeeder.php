@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
-use App\User;
-use App\Ad;
-use App\Category;
+use app\User;
+use app\Ad;
+use app\Category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,8 +21,6 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'  => 'Naimul Hasan',
             'gender' => 'Male',
-            'dept' => 'CSE',
-            'session' => '2016-17',
             'email' => 'admin@gmail.com',
             'phone' => '01838388807',
             'password' => bcrypt('aaaaaaaa')
@@ -31,8 +28,6 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name'  => 'ndmin',
             'gender' => 'Female',
-            'dept' => 'CSE',
-            'session' => '2016-17',
             'email' => 'nadmin@gmail.com',
             'phone' => '01927228335',
             'password' => bcrypt('aaaaaaaa')
@@ -45,8 +40,6 @@ class DatabaseSeeder extends Seeder
             User::create([
                 'name' => $faker->name,
                 'gender'=>$gender[rand(0,1)],
-                'dept'=>$dept[rand(0,3)],
-                'session'=>$session[rand(0,3)],
                 'phone' => $faker->phoneNumber,
                 'email' => $faker->safeEmail,
                 'password' => bcrypt('aaaaaaaa')
@@ -55,8 +48,8 @@ class DatabaseSeeder extends Seeder
 
         //Seeding Ads
 
-        $categories = ['Sports','Study-Material','Mobile','Mobile-Accessory','Laptop','Computer','Comp-Accessory','Electronics','Camera','kitchenware','Furniture','Household','Others'];
-        $conditions = ['New','Used'];
+        $categories = ['Flower Plants','Fruit tree','Herbal Tree','orchids','Furtilizer','Pots','Accesorries'];
+        $conditions = ['Germinated','From seed'];
         
         for($i=0; $i<100; $i++){
             $img="https://picsum.photos/id/".rand(1,900)."/600/400";
@@ -64,25 +57,20 @@ class DatabaseSeeder extends Seeder
                 'user_id'=>rand(1,10),
                 'name'=>ucfirst($faker->sentence($nbWords = 3, $variableNbWords = true) ),
                 'price'=>rand(100,5000),
-                'negotiation'=>$faker->randomElement($array = array('negotiable','fixed')),
-                'category'=>$categories[rand(0,12)],
-                'condition'=>$conditions[rand(0,1)],
-                'used_time'=>rand(0,1000),
+                'category'=>$categories[rand(0,6)],
                 'description'=>$faker->paragraph,
-                'specification'=>$faker->sentence,
                 'available'=>rand(0,1),
                 'image'=>$img
             ]);
         }
 
         //Seeding Categories 
-        $categories = ['Sports','Study-Material','Mobile','Mobile-Accessory','Laptop','Computer','Comp-Accessory','Electronics','Camera','kitchenware','Furniture','Household','Others'];
 
-        for($i=0; $i<13; $i++){
+        for($i=0; $i<7; $i++){
             $count=Ad::where('category',$categories[$i])->count();
             Category::create([
                 'category'=>$categories[$i],
-                'product_count'=> $count
+                'plants'=> $count
             ]);
         }
 
